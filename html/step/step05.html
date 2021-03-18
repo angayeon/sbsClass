@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>float 속성</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <p class="txt-page">(Section07)-p.120~p.131</p>
+        <h3>float 개요</h3>
+         <p>대부분의 사이트들은 전체 레이아웃이 수직 구성이며 '위-아래'로 스크롤 하여 사용합니다. 레이아웃을 구성할 때 가장 많이 사용하는 앨리먼트(Elements)들은 기본적으로 블록(Block) 개념으로 표시(Display)되고 있습니다. 앨리먼트들을 쌓이는 수직 구성이 아닌 '왼쪽-오른쪽'으로 배치하고 할 경우, table, inline-block 등의 도움을 받아왔습니다.</p>
+         <p>하지만, table이나 inline-block 만으로 레이아웃을 구성하는데 한계가 있어 float 속성이 등장하게 되었습니다. float이라는 단어는 원래 ‘뜨다’ 라는 의미입니다. float 은 어떠한 앨리먼트(Elements)들이 보통 흐름(normal flow)을 벗어나 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치될 수 있게 만들어주는 속성입니다. </p>
+        <h3>float 속성</h3>
+        <div class="table-basic">
+            <table class="table">
+                <caption>종류, left, right, none에 대한 정보 제공</caption>
+                <colgroup>
+                    <col style="width:25%">
+                    <col style="width:30%">
+                    <col style="width:30%">
+                    <col style="width:15%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">종류</th>
+                        <th scope="col">left</th>
+                        <th scope="col">right</th>
+                        <th scope="col">none</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">너비(width)</th>
+                        <td class="text-left">최대한 줄어든다.</td>
+                        <td class="text-left">최대한 줄어든다.</td>
+                        <td class="text-left">그대로 유지</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">본질</th>
+                        <td class="text-left">위로 올라갈 수 있으면 올라간 후 좌측으로 붙는다.</td>
+                        <td class="text-left">위로 올라갈 수 있으면 올라간 후 우측으로 붙는다.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">block요소로부터 무시</th>
+                        <td class="text-left">무시당함</td>
+                        <td class="text-left">무시당함</td>
+                        <td class="text-left">무시 안당함</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">inline, inline-block요소로부터 무시</th>
+                        <td class="text-left">무시 안당함</td>
+                        <td class="text-left">무시 안당함</td>
+                        <td class="text-left">무시 안당함</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4>알아두기! <small>★★★★★</small></h4>
+        <div class="area-box">
+            <p class="txt-check">float : left 와 float : right는 block요소인 부모에게 무시를 당한다. 따라서 부모가 감싸주지 않는다. (자식으로 인정 x)</p>
+            <p class="txt-check">위의 부작용을 해결하기 위해 희생적인 막내(::after)를 추가한다.</p>
+            <p class="txt-check">모든 요소에게는 보이지않는 자식이 있다. 첫째 자식(::before) / 막내 자식(::after)</p>
+            <p class="txt-check">clear:both는 float계에서 줄바꿈(엔터) 역할을 한다.</p>
+            <p class="txt-check">즉, <span class="color-point">부모태그::after {content: " "; display: block; clear: both;}</span>로 부작용 해결!</p>
+        </div>
+        
+        <div class="border"></div>
+        <h4>설명</h4>
+        <p class="txt-check">해결2 참고 그래도 모르겠으면 해결1 참고한 후, 다시 해결2 참고</p>
+        <div class="txt-box">
+            <p><a class="txt-btn" href="https://to2.kr/bWf" target="_blank" title="새창열림">부작용 해결1</a></p>
+            <p><a class="txt-btn" href="https://to2.kr/bWh" target="_blank" title="새창열림">부작용 해결2</a></p>
+        </div>
+      
+    </div>
+
+</body>
+
+</html>

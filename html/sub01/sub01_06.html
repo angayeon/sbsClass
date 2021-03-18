@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>캐스캐이딩 스타일시트(CSS)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <p class="txt-page">(Section05)-p.098~</p>
+        <h3>캐스캐이딩 스타일시트(CSS)</h3>
+        <p>CSS에서 C는 <span class="color-point">Cascanding</span>의 약자로 <mark>위에서 아래로 흐르는 스타일시트</mark>라는 뜻입니다.</p>
+        <p>캐스캐이딩의 의미를 이해하고 스타일의 우선 순위에 대한 개념을 이해한다면 효율적인 웹 문서를 만들 수 있습니다.</p>
+        <div class="border"></div>
+        <h4>1) 스타일 우선 순위</h4>
+        <p>우선 순위는 어떤 스타일을 먼저 적용할 것인지 결정하는 규칙을 말합니다.</p>
+        <div class="area-box">
+            <p><span class="num-li">중요도 : </span>중요 스타일은 !important를 붙여서 나타냅니다.</p>
+            <p><span class="num-li">브라우저의 기본 스타일시트 : </span>브라우저에서 따로 스타일을 지정하지 않아도 나타나는 스타일을 말합니다.</p>
+        </div>
+        <div class="code-box">
+            <p class="code-tag tag2">/* 주석문 (단축키: ctrl + /) */</p>
+            <p><span class="code-tag">p</span> { <em class="code-tag tag4">color</em> : <em class="code-tag tag3">red</em> <span class="code-tag">!important</span> ; <em class="code-tag tag4">text-align</em> : <em class="code-tag tag3">center</em> ; } <span class="code-tag tag2">/* 글자 스타일 */</span></p>
+            <p><span class="code-tag">p</span> { <em class="code-tag tag4">color</em> : <em class="code-tag tag3">blue</em> ; } <span class="code-tag tag2">/* 글자 색상 */</span></p>
+        </div>
+
+        <div class="txt-box">
+            <a class="txt-btn" href="https://to2.kr/bNW" target="_blank" title="새창열림">설명</a>
+        </div>
+
+        <p class="txt-check">!important 는 우선순위가 높다.</p>
+
+        <div class="area-box">
+            <p>인라인 스타일 &gt; id 스타일 &gt; class 스타일 &gt; 태그 스타일</p>
+        </div>
+
+        <div class="border"></div>
+        <h4>2) 소스 우선 순위</h4>
+        <p>같은 태그나 class등에 스타일을 준 경우, 마지막에 적용된 스타일을 우선순위로 봅니다.</p>
+        <div class="code-box">
+            <p class="code-tag tag2">/* 주석문 (단축키: ctrl + /) */</p>
+            <p><span class="code-tag">p</span> { <em class="code-tag tag4">color</em> : <em class="code-tag tag3">red</em>; <em class="code-tag tag4">font-weight</em> : <em class="code-tag tag3">bold</em> ; } <span class="code-tag tag2">/* 글자 스타일 */</span></p>
+            <p><span class="code-tag">p</span> { <em class="code-tag tag4">color</em> : <em class="code-tag tag3">blue</em> ; } <span class="code-tag tag2">/* 글자 색상 */</span></p>
+        </div>
+        
+        <p class="txt-check">마지막에 적용된 스타일의 우선순위가 높다.</p>
+
+
+
+    </div>
+
+</body>
+
+</html>

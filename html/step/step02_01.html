@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>이미지태그</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+    <style>
+        .imgBox-wrap {
+            display: flex;
+            max-width: 1000px;
+        }
+
+        .imgBox-wrap>div {
+            width: 33.3333%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .imgBox-wrap>div img {
+            display: block;
+            width: 100%;
+        }
+
+        .imgBox-wrap>div p {
+            padding: 10px 0;
+        }
+
+        @media(max-width: 550px){
+            .imgBox-wrap { display: block; }
+            .imgBox-wrap>div { width: 100%; margin: 0 auto 30px; }
+            .imgBox-wrap>div img { max-width: 300px; margin: 0 auto; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <p class="txt-page">(Section04)-p.072~</p>
+        <h3>이미지태그</h3>
+        <p>HTML 문서에는 img 태그를 사용하여 이미지를 표현할 수 있습니다.</p>
+
+        <h4>이미지 저장 방법</h4>
+        <div class="area-box">
+            <p class="txt-check">이미지를 저장할 때, 반드시 <span class="color-point">소문자로 저장, 공백 사용 불가, 한글파일명으로 사용 불가</span></p>
+            <p class="txt-check">웹 문서가 있는 폴더 내에 불러오려는 이미지 파일이 존재해야 합니다.</p>
+            <p class="txt-check">&ldquo;img&rdquo; 나 &ldquo;images&rdquo; 와 같은 <span class="color-point">영문 폴더를 만들어 별도로 관리</span>하는 것이 좋습니다.</p>
+        </div>
+        
+
+        <h4 class="mt_30">이미지 태그 속성</h4>
+        <p>이미지 alt값은 웹 표준에 따라서 반드시 속성에 넣어야 합니다.</p>
+        <div class="code-box">
+            <p class="code-tag tag2">&lt;!-- img태그 (단축키: img + tab키) --&gt;</p>
+            <p class="ml_30"><span class="code-tag">&lt;img </span><span class="code-tag tag2">src</span>=<span class="code-tag tag3">"</span>이미지 파일의 경로 또는 url<span class="code-tag tag3">"</span>
+                <span class="code-tag tag2">alt</span>=<span class="code-tag tag3">"</span>이미지에 대한 설명<span class="code-tag tag3">"</span>
+                <span class="code-tag">&gt;</span><span class="code-tag">&lt;/img&gt;</span>
+            </p>
+
+        </div>
+        <div class="table-basic">
+            <table class="table">
+                <caption>속성, 설명 정보제공</caption>
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:80%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">속성</th>
+                        <th scope="col">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p>src</p></td>
+                        <td class="text-left"><span>이미지의 경로 지정</span></td>
+                    </tr>
+                    <tr>
+                        <td><p>alt</p></td>
+                        <td class="text-left"><span>이미지가 보이지 않을 때 표시하는 대체 글자 지정 (즉, 이미지에 대한 설명)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="txt-check">src="이미지의 경로를 적는다!" 제일 중요!</p>
+        <p class="txt-check">alt 값은 생략 금지! 무조건! 이미지에 대한 설명을 써줍니다.</p>
+
+        <div class="border"></div>
+        <h4>이미지 alt값 예시</h4>
+        <div class="imgBox-wrap">
+            <div>
+                <img src="../../img/step/step02_img02.jpg" alt="아보카도 사진">
+                <p>alt="아보카도 사진"</p>
+            </div>
+            <div>
+                <img src="../../img/step/step02_img01.jpg" alt="강아지 사진">
+                <p>alt="강아지 사진"</p>
+            </div>
+            <div>
+                <img src="../../img/step/step02_img03.jpg" alt="도너츠 사진">
+                <p>alt="도너츠 사진"</p>
+            </div>
+        </div>
+        <div class="border"></div>
+
+        <h3>이미지의 절대 경로와 상대 경로</h3>
+        <p>이미지를 불러올 때 <mark>가장 중요한 것은 이미지의 경로</mark>입니다.</p>
+        <h4>1) 절대 경로</h4>
+        <p>어떠한 웹 페이지나 파일이 가지고 있는 고유한 경로를 절대 경로라고 합니다.</p>
+        <p>웹페이지에서 이미지의 URL을 가지고 오거나 내 컴퓨터 안의 이미지 경로를 가져올 때 절대경로를 사용하는 것 입니다.</p>
+        <div class="area-box">
+            <p><span class="num-li">웹페이지 이미지 주소를 불러오는 경우 :</span> &lt;img src="http://www.xxxxx.com/image.jpg"&gt;</p>
+            <p><span class="num-li">내 컴퓨터 안의 이미지 경로를 불러오는 경우 :</span> &lt;img src="C:\user\...\image.jpg"&gt;</p>
+
+        </div>
+        <p class="txt-page">(Section04)-p.076~</p>
+        <h4>2) 상대 경로</h4>
+        <p><mark>작업중인 공간(폴더)을 기준</mark>으로 <mark>상대적인 위치</mark>를 가리키는 경로를 상대 경로라고 합니다.</p>
+        <div class="area-box">
+            <p><span class="num-li">같은 폴더 안의 이미지 사용 : </span> &lt;img src="image.jpg"&gt;</p>
+            <p><span class="num-li">하위 폴더 안의 이미지 사용 : </span> &lt;img src="file/image.jpg"&gt;</p>
+            <p><span class="num-li">상위 폴더 안의 이미지 사용 : </span> &lt;img src="../file/image.jpg"&gt;</p>
+        </div>
+        <p class="txt-check">이미지의 파일이 같은 폴더에 저장되어있을 경우 파일명만 적어줍니다.</p>
+        <p class="txt-check">하위 폴더에 저장되어 있는 경우에는 "폴더명/이미지파일" 로 적어줍니다.</p>
+        <p class="txt-check">상위 폴더에 저장되어 있는 경우에는 "../폴더명/이미지파일" 로 적어줍니다.</p>
+    </div>
+
+
+</body>
+
+</html>

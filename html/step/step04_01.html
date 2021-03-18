@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>display 속성</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+
+        <h3>display 속성</h3>
+        <div class="table-basic">
+            <table class="table">
+                <caption>종류, inline-block, inline, block, none에 대한 정보 제공</caption>
+                <colgroup>
+                    <col style="width:25%">
+                    <col style="width:25%">
+                    <col style="width:25%">
+                    <col style="width:25%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">종류</th>
+                        <th scope="col">inline-block, inline</th>
+                        <th scope="col">block</th>
+                        <th scope="col">none</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">너비(width)</th>
+                        <td class="text-left">최소한으로 줄어든다.</td>
+                        <td class="text-left">최대한으로 넓어진다.</td>
+                        <td class="text-left">없어진다.</td>
+                    </tr>
+                     <tr>
+                        <th scope="row">높이(height)</th>
+                        <td class="text-left">높이를 지정하지 않는 한, 최소한으로 줄어든다.</td>
+                        <td class="text-left">높이를 지정하지 않는 한, 최소한으로 줄어든다.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">본질</th>
+                        <td class="text-left">글자화</td>
+                        <td class="text-left">블록화</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">line의 사용</th>
+                        <td class="text-left">한줄에 최대한 여러개가 나온다.</td>
+                        <td class="text-left">한줄을 무!조!건! 혼자 쓴다.</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">정렬</th>
+                        <td class="text-left">부모의 text-align에 의해서 정렬</td>
+                        <td class="text-left">스스로 스타일을 써서 정렬 가능</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="txt-box">
+            <p><a class="txt-btn" href="https://to2.kr/bN9" target="_blank" title="새창열림">정렬 이해</a></p>
+        </div>
+        
+        <h4>알아두기! <small>★★★★★</small></h4>
+        <div class="area-box">
+            <p class="txt-check"><mark>a, img, span</mark> 태그는 기본적으로 display 가 <mark>inline</mark>이다.</p>
+            <p class="txt-check">inline 요소에는 width, height, margin, padding 등의 속성이 제대로 적용되지 않는다.</p>
+        </div>
+
+    </div>
+
+</body></html>

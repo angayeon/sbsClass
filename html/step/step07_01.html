@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>구조 선택자와 형태 구조 선택자</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <p class="txt-page">(Section09)-p.163~</p>
+        <h3>구조 선택자와 형태 구조 선택자 구분</h3>
+        <div class="area-box">
+            <p><span class="color-point">A:nth-child(n)</span> = 부모 앨리먼트 안에 모든 앨리먼트 중 n번째 앨리먼트</p>
+            <p><span class="color-point">A:nth-of-type(n)</span> = 부모 앨리먼트 안에 A라는 앨리먼트 중 n번째 앨리먼트</p>
+            <p><span class="color-point">A:first-child</span> = 부모 앨리먼트 안에 모든 앨리먼트 중 첫번째 앨리먼트</p>
+            <p><span class="color-point">A:last-child</span> = 부모 앨리먼트 안에 모든 앨리먼트 중 마지막 앨리먼트</p>
+            <p><span class="color-point">A:first-of-type</span> = 부모 앨리먼트 안에 A라는 앨리먼트 중 첫번째 앨리먼트</p>
+            <p><span class="color-point">A:last-of-type</span> = 부모 앨리먼트 안에 A라는 앨리먼트 중 마지막 앨리먼트</p>
+        </div>
+
+        <div class="border"></div>
+
+        <h4>nth-child</h4>
+        <p class="txt_bul"><mark>:nth-child(1)</mark> = 첫번째 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        <p class="txt_bul"><mark>:nth-child(2n)</mark> = 두번째 마다 선택 = <span class="color-point">짝수 (even)</span> <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+            </div>
+        </div>
+        <p class="txt_bul"><mark>:nth-child(2n+1)</mark> = 첫번째 앨리먼트로부터 2번째 마다 선택 = <span class="color-point">홀수(odd)</span> <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(2n+5)</mark> = 다섯번째 앨리먼트부터 2개 마다 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(-2n+5)</mark> = 첫번째 앨리먼트부터 5번째 앨리먼트까지 2개 마다 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(n+5)</mark> = 5번째 앨리먼트부터 모두 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(-n+5)</mark> = 앞에서부터 5개만 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(n+3):nth-child(-n+8)</mark> = 선택자를 두번 사용하여 교집합인 앨리먼트만 선택 (즉, 3번째부터 8번째까지)</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(odd)</mark> = 홀수 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>:nth-child(even)</mark> = 짝수 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+            </div>
+        </div>
+        
+        <div class="border"></div>
+        <!-- nth-of-type -->
+        <h4>nth-of-type</h4>
+        <p class="txt_bul"><mark>p:nth-of-type(1)</mark> = 부모 앨리먼트 안에 첫번째 p앨리먼트 선택 <small>★★★</small></p>
+        <p class="txt-check">첫번째 앨리먼트인 span 태그가 선택되는게 아니라 p태그 중에서 첫번째 p태그가 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        
+        <p class="txt_bul"><mark>p:nth-of-type(2n+1)</mark> = 부모 앨리먼트 안에 p앨리먼트 중 첫번째부터 2번째마다 선택</p>
+        <p class="txt-check">span태그는 카운트에 넣지 말고, p태그만 카운트에 넣는다.</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-orange">p</div>
+            </div>
+        </div>
+        
+        <p class="txt_bul"><mark>p:nth-of-type(n+2):nth-of-type(-n+5)</mark> = 선택자를 두번 사용하여 교집합인 앨리먼트만 선택</p>
+        <p class="txt-check">즉, 부모 앨리먼트 안에 p태그 중 2번째부터 5번째까지만 선택</p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <h3>Tip</h3>
+        <div class="area-box">
+            <p class="txt-check">:nth-child와 마찬가지로 모든 선택자 속성을 사용할 수 있다.</p>
+            <p class="txt-check">:nth-child와 차이점은 모든 속성이 아닌 선택한 태그 중에서 선택을 한다.</p>
+        </div>
+        
+        <div class="border"></div>
+        
+        <h4>first-child</h4>
+        <p class="txt_bul"><mark>:first-child</mark> = 부모 앨리먼트 안에 모든 앨리먼트 중 첫번째 앨리먼트 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item bg-red">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <h4>last-child</h4>
+        <p class="txt_bul"><mark>:last-child</mark> = 부모 앨리먼트 안에 모든 앨리먼트 중 마지막 앨리먼트 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-red">p</div>
+            </div>
+        </div>
+        
+        <h4>first-of-type</h4>
+        <p class="txt_bul"><mark>p:first-of-type</mark> = 부모 앨리먼트 안에 모든 p앨리먼트 중 첫번째 p앨리먼트 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item bg-orange">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <h4>last-of-type</h4>
+        <p class="txt_bul"><mark>span:last-of-type</mark> = 부모 앨리먼트 안에 모든 span앨리먼트 중 마지막 span앨리먼트 선택 <small>★★★</small></p>
+        <div class="boxItem-wrap">
+            <div class="boxItem-inner">
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item bg-orange">span</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+                <div class="nt-item">p</div>
+            </div>
+        </div>
+        
+        <div class="border"></div>
+        <h3>CSS DINER 게임으로 익히는 선택자</h3>
+        <br>
+        <div class="btn-box">
+            <a href="https://flukeout.github.io/" target="_blank" title="새창열림" class="btn">CSS DINER 바로가기<i class="download"></i></a>
+        </div>
+        
+        
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>변형 속성(Transform)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <h3>변형 속성(Transform)</h3>
+        <p>CSS3의 transform속성을 이용하면 다양한 2차원, 3차원 변환이 가능합니다.</p>
+
+        <h4>1. 2차원 변환</h4>
+        <p>프로그램에서 화면의 좌표는 X축과 Y축을 사용합니다. 이 때 X좌표, Y좌표가 있는 화면을 2차원 화면 좌표라고 합니다.</p>
+
+        <h4>1) 2차원 변환 함수</h4>
+        <div class="table-basic font-basic-table">
+            <table class="table">
+                <caption>변환 함수, 설명, 방법, 예시 정보 제공</caption>
+                <colgroup>
+                    <col style="width:26%">
+                    <col style="width:37%">
+                    <col style="width:37%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">변환 함수</th>
+                        <th scope="col">설명</th>
+                        <th scope="col">방법</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">tanslate(tanslateX, tanslateY)</th>
+                        <td class="text-left">특정 크기만큼 이동</td>
+                        <td class="text-left">%나 px로 표시</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">transform: translate(-50%, -50%)&#59;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">tanslateX</th>
+                        <td class="text-left">X축으로 특정 크기만큼 이동합니다.</td>
+                        <td class="text-left">%나 px로 표시</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">transform: translateX(30px)&#59; <small> x축으로 30px 이동</small></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">tanslateY</th>
+                        <td class="text-left">Y축으로 특정 크기만큼 이동합니다.</td>
+                        <td class="text-left">%나 px로 표시</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">transform: translateY(-100px)&#59; <small> y축으로 -100px 이동</small></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">scale(scaleX, scaleY)</th>
+                        <td class="text-left">특정 크기 만큼 확대 및 축소합니다.</td>
+                        <td class="text-left">크기는 1을 기준으로 100% <br> 1보다 작으면 0.1~0.9 축소 <br> 1보다 크면 1.1~ 확대</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">
+                            transform: scale(1.5)&#59; <small> x축 y축 전체 1.5배 확대</small>
+                            <br>transform: scale(2, -1.2)&#59; <small> x축 2배 확대, y축 1.2배 축소</small>
+                            <br>transform: scale(-0.5, 5)&#59; <small> x축 0.5배 축소, y축 5배 확대</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">rotate</th>
+                        <td class="text-left">특정 각도만큼 회전합니다.</td>
+                        <td class="text-left">시계방향(deg) 또는 시계반대방향(-deg) 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">
+                            transform: rotate(180deg)&#59; <small> 시계방향으로 180도 회전</small>
+                            <br> transform: rotate(-135deg)&#59; <small> 시계반대방향으로 135도 회전</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">skew</th>
+                        <td class="text-left">특정 각도만큼 기울입니다.</td>
+                        <td class="text-left">시계방향(deg) 또는 시계반대방향(-deg) 사용</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left" colspan="2">
+                            transform: skew(45deg, 15deg)&#59; <small> 시계방향으로 x축 45도, Y축15도 기울이기</small>
+                            <br>transform: skew(-135deg) <small> 시계반대방향으로 135도 기울이기</small>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="border"></div>
+    </div>
+
+</body>
+
+</html>

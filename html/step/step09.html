@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>시맨틱 구조</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../img/favicon-16x16-ver2.png">
+    <style>
+        .semantic-img-box > img {
+            width: 100%; max-width: 400px; margin: 0 auto; display: block;
+        }
+        .semantic-img-box > small {
+            font-size: 12px; color: #9c9c9c; margin-top: 20px; display: block; text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="web-class-wrap cont-wrap">
+        <p class="txt-page">(Section11)-p.09~</p>
+        <h3>시맨틱 구조</h3>
+        <P>웹 표준 문서 HTML5의 구조가 복잡해짐에 따라 소스 코드에서 구조를 파악하기 쉽지 않아 <span class="color-point">시맨틱 태그(Semantic tag)를 사용하도록 권장</span>하고 있습니다.</P>
+        <p>시맨틱 태그는 HTML5에서 새롭게 추가된 태그로 <mark>페이지의 구조를 쉽게 파악</mark>할 수 있게 도와줍니다. 또한 검색 엔진 같은 프로그램에서 자료를 검색하여 정보의 의미를 분석할 수 있게 도와주는 지능형 웹이며, 시각 장애인들을 위한 웹 표준 방식이기도 합니다.</p>
+        
+        <h3>시맨틱 태그의 필요성</h3>
+        <p>시맨틱 태그가 나오기 전 웹 페이지는 구조를 만들기 위해 대부분 코드에 &lt;div&gt; 태그를 사용하고 id 속성이나 class 속성으로 구분했습니다. 이 때, id 나 class의 속성은 대부분 작업자에 의해 지정되었습니다.</p>
+        <p>그래서 코드를 수정하거나 구조를 파악하기 위해서 많은 어려움이 있었고, 시각 장애인이 화면 낭독기(스크린 리더기)를 통해 검색 엔진에서 웹 소스를 읽을 때 어느 부분이 메뉴이고 본문인지 파악하기가 어려웠습니다.</p>
+        
+        <p>이러한 문제를 해결하기 위해 구조에 들어가는 태그를 미리 약속하고 해당 태그를 지정한다면 이해하기 쉬운 구조가 될 것입니다. 그래서 HTML5 표준안에서 문서 구조를 만드는 시맨틱 태그가 등장했습니다.</p>
+        
+        <p>시맨틱 태그는 페이지 구조에서 어떤 역할을 하는지 이름으로 쉽게 이해할 수 있습니다. 예를 들어 &lt;nav&gt; 태그는 navigation 의 성격을 갖고 있는 태그입니다.</p>
+        <p>그렇다면 우리가 흔히 보는 웹 사이트에서 시맨틱 태그가 어떤 것이 있는지, 어떻게 활용되고 있는지 알아볼까요?</p>
+        
+        <div class="border"></div>
+        
+        <h3>시맨틱 태그의 종류</h3>
+        <h4>1) &lt;header&gt; 태그</h4>
+        <p>페이지 <span class="color-point">맨 위쪽에 삽입</span>하는 <span class="color-point">머리말을 의미</span>합니다. 사이트 전체의 헤더는 주로 로고를 중심으로 내비게이션 메뉴와 검색 창이 들어가며, 내비게이션 메뉴는 &lt;nav&gt; 태그로 구성할 수 있습니다.</p>
+        
+        <h4>2) &lt;nav&gt; 태그</h4>
+        <p>nav 태그의 사용으로 어느 부분이 메뉴인지 쉽게 파악할 수 있으며, 사이트 내의 <span class="color-point">내비게이션 메뉴를 묶거나 독립적으로 구성</span>할 수 있습니다. 문서 안에 여러 개의 nav 태그를 사용할 경우, id 선택자로 구분하여 스타일을 꾸미고, 구분하여 독립적으로 사용하도록 권장합니다.</p>
+        
+        <h4>3) &lt;section&gt; 태그</h4>
+        <p><span class="color-point">콘텐츠 영역을 포함하는 태그</span>로 <span class="color-point">해당 콘텐츠를 주제별로 묶을 때 사용</span>하며 &lt;section&gt; 태그 내부에는 h1~h6의 제목 태그가 함께 사용됩니다. 또한 다른 태그(div, span, img, a... 등)를 넣어 사용합니다.</p>
+        
+        <h4>4) &lt;article&gt; 태그</h4>
+        <p>article의 사전적 의미는 신문이나 잡지의 &lsquo;기사&rsquo;를 뜻하는 것으로 <span class="color-point">&lt;article&gt; 태그는 웹 상의 실제 내용을 작성</span>하는 것입니다. 블로그의 포스트나 웹 사이트 내용과 같은 독립적인 웹 콘텐츠가 이에 해당됩니다.</p>
+        
+        <h4>5) &lt;aside&gt; 태그</h4>
+        <p>웹 문서의 <span class="color-point">왼쪽이나 오른쪽 또는 하단에 사이드 바</span>가 표시되는 것을 볼 수 있는데, 이런 사이드 바를 만드는 태그가 aside 태그 입니다. aside 태그는 필수 요소가 아니며 광고나 일반적인 링크 모음처럼 문서의 메인 내용에 영향을 미치지 않는 내용을 넣을 때 사용합니다.</p>
+        
+        <h4>6) &lt;footer&gt; 태그</h4>
+        <p>웹 문서 하단의 저작권 표시와 같은 내용과 연락처 정보를 표시합니다.</p>
+        
+        <div class="border"></div>
+        
+        <h3>시맨틱 태그의 구성</h3>
+        <div class="semantic-img-box area-box">
+            <img src="../../img/semantic_img01.jpg" alt="시맨틱 태그의 구성을 보여주는 사진">
+            <small>출처 : https://devbox.tistory.com/entry/HTML5-HTML5-%EC%8B%9C%EB%A9%98%ED%8B%B1-%EA%B5%AC%EC%A1%B0-%ED%83%9C%EA%B7%B8</small>
+        </div>
+    </div>
+
+</body>
+
+</html>
